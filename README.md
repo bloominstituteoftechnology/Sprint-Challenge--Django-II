@@ -4,6 +4,10 @@ For this sprint challenge, you'll be exploring some test data in our Django RPG.
 Start by pulling and checking out the `testdata` branch from the main repo:
 https://github.com/lambdaschool/django-rpg
 
+You can do so by just making a fresh clone of the single branch, as you don't
+have to open a PR for Django-RPG (your PR will be in this repo instead):
+`git clone -b testdata --single-branch https://github.com/LambdaSchool/Django-RPG.git`
+
 In this branch, `rpg/db.sqlite3` has been populated with dozens-to-hundreds of
 randomly generated characters across the base classes (Fighter, Mage, Cleric,
 and Thief) as well as some a few Necromancers. Also generated are Items,
