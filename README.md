@@ -40,6 +40,3 @@ investigate data in a Django application. If you get to the stretch goal of
 using autofixture, the practical application here is testing - you can have
 tests that generate unique random data each time, ensuring the robustness of
 your application.
-This sprint challenge is to create "from scratch" (using the appropriate
-installed tools) a Django web application for a TODO list. You should do so in
-your own fork of this repository, so you can turn it in via a pull request.
