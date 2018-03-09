@@ -10,7 +10,7 @@ and Thief) as well as some a few Necromancers. Also generated are Items,
 Weapons, and connections from characters to them. Note that, while the name
 field was randomized, the numeric and boolean fields were left as defaults.
 
-Your main goal is to use the Django shell and/or dbshell to answer:
+Your main goal is to write Python code that uses the Django ORM to answer:
 
 - How many total Characters are there?
 - How many of each specific subclass?
@@ -19,11 +19,14 @@ Your main goal is to use the Django shell and/or dbshell to answer:
 - On average, how many Items does each Character have?
 - On average, how many Weapons does each character have?
 
-In addition to answering the questions, please turn in e.g. `queries.py` and/or
-`queries.sql` with code that reproduces your results.
+You can experiment/execute our code using the Django shell. Please turn in a
+file `queries.py` with your code along with comments for your answers.
 
 Stretch goals:
 
+- Answer the same questions using the Django db shell/SQL (turn in `queries.sql`)
+- Add views/templates for a "dashboard" that reports the stats (pulling data
+from the database, so it updates if that data changes)
 - Using tables or charts, summarize answers to the above
 - Slice the Items/Weapon distribution by Character subclass
 - Play with populating your own test data - this data was generated using
@@ -37,3 +40,6 @@ investigate data in a Django application. If you get to the stretch goal of
 using autofixture, the practical application here is testing - you can have
 tests that generate unique random data each time, ensuring the robustness of
 your application.
+This sprint challenge is to create "from scratch" (using the appropriate
+installed tools) a Django web application for a TODO list. You should do so in
+your own fork of this repository, so you can turn it in via a pull request.
