@@ -12,12 +12,29 @@ field was randomized, the numeric and boolean fields were left as defaults.
 
 Your main goal is to write Python code that uses the Django ORM to answer:
 
-- How many total Characters are there?
+- How many total Characters are there? 302 not 313 because necromancers are mages
+> from charactercreator.models import *
+> characters = Character.objects.all()
+> characters.__len__()
+> or -> Character.objects.all().count()
 - How many of each specific subclass?
-- How many total Items?
-- How many of the Items are weapons? How many are not?
-- On average, how many Items does each Character have?
-- On average, how many Weapons does each character have?
+* 68 fighters
+* 108 mages
+* 75 clerics
+* 51 thieves
+* 11 necromancers
+> for each of these I did -> fighters = Fighter.objects.all() -> fighters.__len__()
+- How many total Items? 174
+> from armory.models import *
+> items = Item.objects.all() -> items.__len__()
+- How many of the Items are weapons? How many are not? 37 are weapons 137 are not
+> weapons = Weapon.objects.all() -> weapons.__len__()
+> notweapons = items.__len__() - weapons.__len__()
+- On average, how many Items does each Character have? 0.5761589403973509
+> avgItems = items.__len__() /characters.__len__()
+- On average, how many Weapons does each character have? 0.12251655629139073
+> avgWeapons = weapons.__len__() / characters.__len__()
+> Limiting floats to two decimal points -> round(avgWeapons, 2)
 
 You can experiment/execute our code using the Django shell. Please turn in a
 file `queries.py` with your code along with comments for your answers.
