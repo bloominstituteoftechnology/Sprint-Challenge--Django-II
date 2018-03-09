@@ -14,6 +14,10 @@ and Thief) as well as some a few Necromancers. Also generated are Items,
 Weapons, and connections from characters to them. Note that, while the name
 field was randomized, the numeric and boolean fields were left as defaults.
 
+Another approach to getting this data - `db.sqlite3` has been added to this
+repository, and if you just overwrite the same file you're using for the RPG
+(located by default in `rpg/db.sqlite3`) you'll get the data.
+
 Your main goal is to write Python code that uses the Django ORM to answer:
 
 - How many total Characters are there?
