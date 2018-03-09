@@ -19,6 +19,7 @@ Your main goal is to write Python code that uses the Django ORM to answer:
 - On average, how many Items does each Character have?
 - On average, how many Weapons does each character have?
 
+
 You can experiment/execute our code using the Django shell. Please turn in a
 file `queries.py` with your code along with comments for your answers.
 
