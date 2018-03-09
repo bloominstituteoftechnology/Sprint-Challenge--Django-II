@@ -48,6 +48,7 @@ file `queries.py` with your code along with comments for your answers.
 Stretch goals:
 
 - Answer the same questions using the Django db shell/SQL (turn in `queries.sql`)
+> select count(*) from charactercreator_character;
 > select * from charactercreator_character; -> returns 302|Aliquam n|0|0|10|1|1|1|1
 > select * from charactercreator_fighter; -> 68|0|100
 - Add views/templates for a "dashboard" that reports the stats (pulling data
