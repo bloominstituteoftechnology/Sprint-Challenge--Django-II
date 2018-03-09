@@ -19,6 +19,9 @@ Your main goal is to use the Django shell and/or dbshell to answer:
 - On average, how many Items does each Character have?
 - On average, how many Weapons does each character have?
 
+In addition to answering the questions, please turn in e.g. `queries.py` and/or
+`queries.sql` with code that reproduces your results.
+
 Stretch goals:
 
 - Using tables or charts, summarize answers to the above
