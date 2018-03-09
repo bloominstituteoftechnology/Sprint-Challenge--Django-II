@@ -8,6 +8,8 @@ all_entries = Character.objects.all()
 all_entries.count()
 ### 302
 
+
+
 #### Question 2: How many of each specific subclass? ####
 
 # Get all Fighters
@@ -40,6 +42,8 @@ necromancer = Necromancer.objects.all()
 necromancer.count()
 ### 11
 
+
+
 #### Question 3: How many total Items? ####
 
 # Import all items
@@ -49,6 +53,8 @@ all_items = Item.objects.all()
 # Get a count
 all_items.count()
 ### 174
+
+
 
 #### Question 4: How many of the Items are weapons? How many are not? ####
 
@@ -62,8 +68,30 @@ Item.objects.filter(weapon__isnull=True).count()
 
 #### Question 5: On average, how many Items does each Character have? ####
 
-# To do so get the entire total amount of items used between characters and divide by total characters
-Character.objects.filter(inventory__isnull=False).count() / Character.objects.all().count()
-### 2.9735099337748343
+## Gather number of items among all characters
+Character.inventory.through.objects.filter(item_id__lt=137).count()
+## 689
+
+# Take the total amount of items used between characters and divide by total characters
+Character.inventory.through.objects.filter(item_id__lt=137).count() / Character.objects.all().count()
+### 2.281456953642384 ~ 2
+
 
 #### Question 6: On average, how many Weapons does each character have?
+
+## Gather the total amount of weapons among the characters
+Character.inventory.through.objects.filter(item_id__gt=137).count()
+## 203
+
+# Take the total of weapons and divide by the total of characters
+Character.inventory.through.objects.filter(item_id__gt=137).count() / Character.objects.all().count()
+### 0.6721854304635762 ~ 1
+
+
+#Sidenote: Total number of items for each character:
+
+## Total number of items among ALL character
+Character.objects.filter(inventory__isnull=False).count()
+## 898
+Character.objects.filter(inventory__isnull=False).count() / Character.objects.all().count()
+### 2.9735099337748343 ~ 3
