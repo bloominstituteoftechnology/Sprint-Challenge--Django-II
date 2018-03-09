@@ -28,4 +28,6 @@ def averageItemCount(request):
     # return and rounds out to 3 items for each character
     return HttpResponse(round(inventoryCount/characterCount))
 def averageWeaponCount(reqest):
-    weaponCount = Character.objects.values('')
+    #returns and rounds out to 1 weapon for each character
+    weaponCount = Character.inventory.through.objects.filter(item_id__gt=137).count()
+    return HttpResponse(round(weaponCount/characterCount))
