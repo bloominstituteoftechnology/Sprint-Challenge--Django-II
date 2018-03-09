@@ -12,6 +12,8 @@ field was randomized, the numeric and boolean fields were left as defaults.
 
 Your main goal is to write Python code that uses the Django ORM to answer:
 
+I read this Note: Don't use len() on QuerySets if all you want to do is determine the number of records in the set. It's much more efficient to handle a count at the database level, using SQL's SELECT COUNT(*), and Django provides a count() method for precisely this reason. So I would replace __len__() with count() everywhere in my code.
+
 - How many total Characters are there? 302 not 313 because necromancers are mages
 > from charactercreator.models import *
 > characters = Character.objects.all()
@@ -30,6 +32,10 @@ Your main goal is to write Python code that uses the Django ORM to answer:
 - How many of the Items are weapons? How many are not? 37 are weapons 137 are not
 > weapons = Weapon.objects.all() -> weapons.__len__()
 > notweapons = items.__len__() - weapons.__len__()
+
+> Item.objects.filter(weapon__isnull=True).count()
+> unfortunately, this line can't find weapon column SELECT * FROM armory_weapon WHERE weapon IS NOT NULL;
+
 - On average, how many Items does each Character have? 0.5761589403973509
 > avgItems = items.__len__() /characters.__len__()
 - On average, how many Weapons does each character have? 0.12251655629139073
@@ -42,6 +48,8 @@ file `queries.py` with your code along with comments for your answers.
 Stretch goals:
 
 - Answer the same questions using the Django db shell/SQL (turn in `queries.sql`)
+> select * from charactercreator_character; -> returns 302|Aliquam n|0|0|10|1|1|1|1
+> select * from charactercreator_fighter; -> 68|0|100
 - Add views/templates for a "dashboard" that reports the stats (pulling data
 from the database, so it updates if that data changes)
 - Using tables or charts, summarize answers to the above
