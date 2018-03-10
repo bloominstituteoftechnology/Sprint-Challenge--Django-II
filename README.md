@@ -34,7 +34,7 @@ I read this Note: Don't use len() on QuerySets if all you want to do is determin
 > notweapons = items.__len__() - weapons.__len__()
 
 > Item.objects.filter(weapon__isnull=True).count()
-> unfortunately, this line can't find weapon column SELECT * FROM armory_weapon WHERE weapon IS NOT NULL;
+> from the q/a lecture -> select count(*) from armory_item where item_id not in (select item_ptr_id from armory_weapon);
 
 - On average, how many Items does each Character have? 0.5761589403973509
 > avgItems = items.__len__() /characters.__len__()
