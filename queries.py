@@ -34,8 +34,8 @@ total Necromancers: 11
 total Items: 898
 total Weapons: 203
 total Items not Weapons: 695
-average number of Items per Character 2.973510
-average number of Weapons per Character 0.672185
+average number of Items per Character 2.9735099337748343
+average number of Weapons per Character 0.6721854304635762
 
 total Character = 302
 total Fighters = 68
