@@ -20,12 +20,35 @@ repository, and if you just overwrite the same file you're using for the RPG
 
 Your main goal is to write Python code that uses the Django ORM to answer:
 
-- How many total Characters are there?
+I read this Note: Don't use len() on QuerySets if all you want to do is determine the number of records in the set. It's much more efficient to handle a count at the database level, using SQL's SELECT COUNT(*), and Django provides a count() method for precisely this reason. So I would replace __len__() with count() everywhere in my code.
+
+- How many total Characters are there? 302 not 313 because necromancers are mages
+> from charactercreator.models import *
+> characters = Character.objects.all()
+> characters.__len__()
+> or -> Character.objects.all().count()
 - How many of each specific subclass?
-- How many total Items?
-- How many of the Items are weapons? How many are not?
-- On average, how many Items does each Character have?
-- On average, how many Weapons does each character have?
+* 68 fighters
+* 108 mages
+* 75 clerics
+* 51 thieves
+* 11 necromancers
+> for each of these I did -> fighters = Fighter.objects.all() -> fighters.__len__()
+- How many total Items? 174
+> from armory.models import *
+> items = Item.objects.all() -> items.__len__()
+- How many of the Items are weapons? How many are not? 37 are weapons 137 are not
+> weapons = Weapon.objects.all() -> weapons.__len__()
+> notweapons = items.__len__() - weapons.__len__()
+
+> Item.objects.filter(weapon__isnull=True).count()
+> from the q/a lecture -> select count(*) from armory_item where item_id not in (select item_ptr_id from armory_weapon);
+
+- On average, how many Items does each Character have? 0.5761589403973509
+> avgItems = items.__len__() /characters.__len__()
+- On average, how many Weapons does each character have? 0.12251655629139073
+> avgWeapons = weapons.__len__() / characters.__len__()
+> Limiting floats to two decimal points -> round(avgWeapons, 2)
 
 You can experiment/execute our code using the Django shell. Please turn in a
 file `queries.py` with your code along with comments for your answers.
@@ -33,6 +56,9 @@ file `queries.py` with your code along with comments for your answers.
 Stretch goals:
 
 - Answer the same questions using the Django db shell/SQL (turn in `queries.sql`)
+> select count(*) from charactercreator_character;
+> select * from charactercreator_character; -> returns 302|Aliquam n|0|0|10|1|1|1|1
+> select * from charactercreator_fighter; -> 68|0|100
 - Add views/templates for a "dashboard" that reports the stats (pulling data
 from the database, so it updates if that data changes)
 - Using tables or charts, summarize answers to the above
