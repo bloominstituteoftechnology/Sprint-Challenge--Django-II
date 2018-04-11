@@ -1,6 +1,6 @@
-# Sprint-Challenge--Django-I
+# Sprint-Challenge--Django-II
 
-For this sprint challenge, you'll be exploring some test data in our Django RPG.
+For this sprint challenge, you'll be exploring some test data in a Django RPG.
 Start by pulling and checking out the `testdata` branch from the main repo:
 https://github.com/lambdaschool/django-rpg
 
