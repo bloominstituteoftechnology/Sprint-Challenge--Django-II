@@ -1,22 +1,32 @@
 # Sprint-Challenge--Django-II
 
 For this sprint challenge, you'll be exploring some test data in a Django RPG.
-Start by pulling and checking out the `testdata` branch from the main repo:
+Start by cloning this repo (you don't have to make your own fork as you will
+turn in this sprint challenge to this repository, you just have to run the app):
 https://github.com/lambdaschool/django-rpg
 
-You can do so by just making a fresh clone of the single branch, as you don't
-have to open a PR for Django-RPG (your PR will be in this repo instead):
-`git clone -b testdata --single-branch https://github.com/LambdaSchool/Django-RPG.git`
+Next, install dependencies from the `Pipfile` using `pipenv`, and set up the
+database schema using `./manage.py migrate`. At this point the app should work,
+and you can try a few other `./manage.py` commands to verify this.
 
-In this branch, `rpg/db.sqlite3` has been populated with dozens-to-hundreds of
-randomly generated characters across the base classes (Fighter, Mage, Cleric,
-and Thief) as well as some a few Necromancers. Also generated are Items,
-Weapons, and connections from characters to them. Note that, while the name
-field was randomized, the numeric and boolean fields were left as defaults.
+But you don't have any data yet - there is test data that has been serialized
+and saved to a file `testdata.json` at the base of the RPG repo. You can load
+this with `./manage.py loaddata testdata.json`, but note that this may conflict
+with any existing data so if you made your own earlier you should remove it.
 
-Another approach to getting this data - `db.sqlite3` has been added to this
-repository, and if you just overwrite the same file you're using for the RPG
-(located by default in `rpg/db.sqlite3`) you'll get the data.
+This test data has dozens-to-hundreds of randomly generated characters across
+the base classes (Fighter, Mage, Cleric, and Thief) as well as some a few
+Necromancers. Also generated are Items, Weapons, and connections from characters
+to them. Note that, while the name field was randomized, the numeric and boolean
+fields were left as defaults.
+
+You should familiarize yourself a bit with these classes and objects - read the
+`models.py` files in the `armory/` and `charactercreator/` apps, and interact
+with the data using the Django shell (`./manage.py shell`). Use the `dir()` and
+`help()` functions to see what fields and methods are accessible. The
+[https://docs.djangoproject.com/en/2.0/topics/db/queries/](official documentation)
+steps through how to query using the Django ORM, including how to filter and
+span relationships (the equivalent of `JOIN` in SQL).
 
 Your main goal is to write Python code that uses the Django ORM to answer:
 
