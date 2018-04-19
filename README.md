@@ -15,7 +15,7 @@ this with `./manage.py loaddata testdata.json`, but note that this may conflict
 with any existing data so if you made your own earlier you should remove it.
 
 This test data has dozens-to-hundreds of randomly generated characters across
-the base classes (Fighter, Mage, Cleric, and Thief) as well as some a few
+the base classes (Fighter, Mage, Cleric, and Thief) as well as a few
 Necromancers. Also generated are Items, Weapons, and connections from characters
 to them. Note that, while the name field was randomized, the numeric and boolean
 fields were left as defaults.
@@ -43,6 +43,8 @@ file `queries.py` with your code along with comments for your answers.
 Stretch goals:
 
 - Answer the same questions using the Django db shell/SQL (turn in `queries.sql`)
+- Do queries that filter/group on substrings (e.g. how many item names contain
+"quid")
 - Add views/templates for a "dashboard" that reports the stats (pulling data
 from the database, so it updates if that data changes)
 - Using tables or charts, summarize answers to the above
