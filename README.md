@@ -24,7 +24,7 @@ You should familiarize yourself a bit with these classes and objects - read the
 `models.py` files in the `armory/` and `charactercreator/` apps, and interact
 with the data using the Django shell (`./manage.py shell`). Use the `dir()` and
 `help()` functions to see what fields and methods are accessible. The
-[https://docs.djangoproject.com/en/2.0/topics/db/queries/](official documentation)
+[official documentation](https://docs.djangoproject.com/en/2.0/topics/db/queries/)
 steps through how to query using the Django ORM, including how to filter and
 span relationships (the equivalent of `JOIN` in SQL).
 
@@ -37,7 +37,7 @@ Your main goal is to write Python code that uses the Django ORM to answer:
 - On average, how many Items does each Character have?
 - On average, how many Weapons does each character have?
 
-You can experiment/execute our code using the Django shell. Please turn in a
+You can experiment/execute your code using the Django shell. Please turn in a
 file `queries.py` with your code along with comments for your answers.
 
 Stretch goals:
