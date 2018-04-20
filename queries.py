@@ -18,7 +18,7 @@ Mage.objects.filter(necromancer__isnull=True).count() # (Answer: 108)
 # How many total items? (Answer: 174)
 Item.objects.all().count()
 
-# How many items are weapons? How many are not? (Answers: 38 are, 136 are not)
+# How many items are weapons? How many are not? (Answers: 37 are, 137 are not)
 Weapon.objects.all().count()
 
 Item.objects.filter(weapon_isnull=True).count()
