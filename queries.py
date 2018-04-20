@@ -44,11 +44,11 @@ def non_weapons():
 
 #display average number of items each character has (2)
 def average_items():
-    items = sum([character.inventory.count() for character in Character.objects.count()])
+    items = sum([character.inventory.count() for character in Character.objects.all()])
     average = items//Character.objects.count()
     return average
 
 #display how many average Weapons each character has (.122)
 def average_Weapons():
     weapons = weapons_count()
-    average = weapons//[character for character in Character.objects.count()]
+    average = weapons//[character for character in Character.objects.all()]
