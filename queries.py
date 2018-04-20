@@ -1,4 +1,4 @@
-from charactercreator.models import Character, Fighter, Mage, Theif, Cleric, Theif, Necromancer
+from charactercreator.models import Character, Fighter, Mage, Thief, Cleric, Thief, Necromancer
 from armory. models import Item, Weapon
 
 c = Character.objects.all()
@@ -64,3 +64,9 @@ average_amount_of_non_Weapon_Items_for_each_Character = 0.45
 # Ona average each character had 0.45 non-Weapon Items
 
 ## TODO: FIND A BETTER WAY OF FINDING THESE AVERAGES IN THE DATABASE? 
+Characters_with_Items = Character.objects.filter(inventory=True)
+Number_of_Characters_with_Items = len(Characters_with_Items)
+Number_of_Characters_with_Items = 3
+#??? so characters at indec 119,154, and 231 are the only ones with items???
+
+
