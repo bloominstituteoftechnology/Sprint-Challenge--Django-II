@@ -1,11 +1,11 @@
 from armory.models import *
 from charactercreator.models import *
-from django.db.models import Avg
 
 # Query 1
 def totalCharacters():
   count = Character.objects.count()
   return count                                        # 302
+
 
 # Query 2
 def totalSubclasses():
@@ -16,10 +16,12 @@ def totalSubclasses():
   print('Thief: ', Thief.objects.count())             # 51
   print('Necromancer: ', Necromancer.objects.count()) # 11
 
+
 # Query 3
 def totalItems():
   count = Item.objects.count()
   return count                                        # 174
+
 
 # Query 4
 def totalWeaponItems():
@@ -53,4 +55,3 @@ def avgWeapons():
     sum += character.inventory.filter(weapon__isnull=False).count()
 
   return sum / Characters.count()                     # 0.6721854304635762
-
