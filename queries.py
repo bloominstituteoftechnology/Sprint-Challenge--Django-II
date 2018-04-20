@@ -2,32 +2,37 @@ from armory.models import *
 from charactercreator.models import *
 
 # Query 1
+# How many total Characters are there?
 def totalCharacters():
   count = Character.objects.count()
   return count                                        # 302
 
 
 # Query 2
+# How many of each specific subclass?
 def totalSubclasses():
-  print('Weapon: ', totalWeaponItems())               # 37
-  print('Fighter: ', Fighter.objects.count())         # 68
-  print('Mage: ', Mage.objects.count())               # 108
-  print('Cleric: ', Cleric.objects.count())           # 75
-  print('Thief: ', Thief.objects.count())             # 51
-  print('Necromancer: ', Necromancer.objects.count()) # 11
+  print('Weapon: ', totalWeaponItems())               # Weapon:       37
+  print('Fighter: ', Fighter.objects.count())         # Fighter:      68
+  print('Mage: ', Mage.objects.count())               # Mage:         108
+  print('Cleric: ', Cleric.objects.count())           # Cleric:       75
+  print('Thief: ', Thief.objects.count())             # Thief:        51
+  print('Necromancer: ', Necromancer.objects.count()) # Necromancer:  11
 
 
 # Query 3
+# How many total Items?
 def totalItems():
   count = Item.objects.count()
   return count                                        # 174
 
 
 # Query 4
+# How many of the Items are weapons?
 def totalWeaponItems():
   count = Weapon.objects.count()
   return count                                        # 37
 
+# How many of the Items are NOT weapons?
 def totalNonWeaponItems():
   count = totalItems() - totalWeaponItems()
   return count                                        # 137
