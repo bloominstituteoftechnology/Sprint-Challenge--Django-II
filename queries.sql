@@ -23,7 +23,35 @@
 
 
 -- 5. On average, how many Items does each Character have?
+--A: 2.97 (2)
+-- sqlite> select count(*) from charactercreator_character_inventory;
+-- count(*)  
+-- ----------
+-- 898       
+-- sqlite> select count(*) from charactercreator_character;
+-- count(*)  
+-- ----------
+-- 302 
+--MANUAL DIVISION : 2.97
+
+--B:
+-- sqlite> select ((select count(*) from charactercreator_character_inventory)/(select count(*) from charactercreator_character));
+-- ((select count(*) from charactercreator_character_inventory)/(select count(*) from charactercreator_character))
+-- ---------------------------------------------------------------------------------------------------------------
+-- 2                                                                                                              
+ 
+
 
 
 
 -- 6. On average, how many Weapons does each character have?
+-- DOES NOT WORK YET error about select returning more than 1 item
+--select count(*) from charactercreator_character_inventory left join armory_weapon where charactercreator_character_inventory not in armory_weapon;
+
+
+-- **Do queries that filter/group on substrings (e.g. how many item names contain "quid")
+
+
+
+-- charactercreator_character_inventory
+-- id          character_id  item_id 
