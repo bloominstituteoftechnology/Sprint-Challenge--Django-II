@@ -52,5 +52,5 @@ def avgWeapons():
   for character in Characters:
     sum += character.inventory.filter(weapon__isnull=False).count()
 
-  return sum / Characters.count()                     # 2.9735099337748343
+  return sum / Characters.count()                     # 0.6721854304635762
 
