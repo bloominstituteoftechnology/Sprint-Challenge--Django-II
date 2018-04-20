@@ -28,6 +28,13 @@ select count(*) from armory_weapon;
 select count(*) from armory_item where item_id not in (select item_ptr_id from armory_weapon);
 
 -- On average, how many Items does each Character have?
-select 
+total_items = select count(*) from charactercreator_character_inventory;
+total_characters = select count(*) from charactercreator_character;
+avg = total_items / total_characters
 
 -- On average, how many Weapons does each character have?
+total_weapons = select count(*) from charactercreator_character_inventory where item_id in (select item_ptr_id from armory_weapon);
+
+total_characters = select count(*) from charactercreator_character;
+
+avg = total_weapons / total_characters
