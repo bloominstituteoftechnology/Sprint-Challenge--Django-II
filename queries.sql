@@ -45,8 +45,12 @@
 
 
 -- 6. On average, how many Weapons does each character have?
--- DOES NOT WORK YET error about select returning more than 1 item
---select count(*) from charactercreator_character_inventory left join armory_weapon where charactercreator_character_inventory not in armory_weapon;
+
+-- POSSIBLE? THOUGH DIFFERENT FROM QUERIES.PY ANSWER
+-- sqlite> select count(*) from charactercreator_character_inventory as inventory where inventory.item_id not in (select item_ptr_id as item_id from armory_weapon)
+--    ...> ;
+-- 692 (this is total amount of weapons across all characters)
+-- MANUAL DIVISION: ANSWER: 2.29
 
 
 -- **Do queries that filter/group on substrings (e.g. how many item names contain "quid")
