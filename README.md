@@ -1,13 +1,14 @@
 # Sprint-Challenge--Django-II
 
 For this sprint challenge, you'll be exploring some test data in a Django RPG.
-Start by cloning this repo (you don't have to make your own fork as you will
-turn in this sprint challenge to this repository, you just have to run the app):
-https://github.com/lambdaschool/django-rpg
+Fork this repo, and use it to add your work (`queries.py` described later) to
+turn in via a pull request. You will also need to clone the Django RPG repo
+(https://github.com/lambdaschool/django-rpg) but you just have to run the app
+and don't need to turn it in (even if you do change it some).
 
-Next, install dependencies from the `Pipfile` using `pipenv`, and set up the
-database schema using `./manage.py migrate`. At this point the app should work,
-and you can try a few other `./manage.py` commands to verify this.
+In the RPG, install dependencies from the `Pipfile` using `pipenv`, and set up
+the database schema using `./manage.py migrate`. At this point the app should
+work, and you can try a few other `./manage.py` commands to verify this.
 
 But you don't have any data yet - there is test data that has been serialized
 and saved to a file `testdata.json` at the base of the RPG repo. You can load
@@ -38,7 +39,8 @@ Your main goal is to write Python code that uses the Django ORM to answer:
 - On average, how many Weapons does each character have?
 
 You can experiment/execute your code using the Django shell. Please turn in a
-file `queries.py` with your code along with comments for your answers.
+file `queries.py` in this repo with your code along with comments for your
+answers.
 
 Stretch goals:
 
@@ -47,7 +49,7 @@ Stretch goals:
 "quid")
 - Add views/templates for a "dashboard" that reports the stats (pulling data
 from the database, so it updates if that data changes)
-- Using tables or charts, summarize answers to the above
+- Using tables or charts, ssummarize answers to the above
 - Slice the Items/Weapon distribution by Character subclass
 - Play with populating your own test data - this data was generated using
 https://github.com/volrath/django-autofixture (this fork is compatible with
