@@ -38,3 +38,7 @@ total_weapons = select count(*) from charactercreator_character_inventory where 
 total_characters = select count(*) from charactercreator_character;
 
 avg = total_weapons / total_characters
+
+-- Do queries that filter/group on substrings (e.g. how many item names contain "quid")
+
+select count(*) from armory_item where name like '%quid%';
