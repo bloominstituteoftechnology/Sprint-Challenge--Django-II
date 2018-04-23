@@ -2,9 +2,9 @@
 
 For this sprint challenge, you'll be exploring some test data in a Django RPG.
 Fork this repo, and use it to add your work (`queries.py` described later) to
-turn in via a pull request. You will also need to clone the Django RPG repo
-(https://github.com/lambdaschool/django-rpg) but you just have to run the app
-and don't need to turn it in (even if you do change it some).
+turn in via a pull request. You will also need to clone the
+[Django RPG repo](https://github.com/lambdaschool/django-rpg) but you just have
+to run the app and don't need to turn it in (even if you do change it some).
 
 In the RPG, install dependencies from the `Pipfile` using `pipenv`, and set up
 the database schema using `./manage.py migrate`. At this point the app should
