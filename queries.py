@@ -1,6 +1,6 @@
-# ? How many total Characters are there? ==> 302
-# Character.objects.count() 
-# ? How many of each specific subclass?
+# How many total Characters are there? ==> 302
+# Character.objects.count(), replace Character with class name 
+# How many of each specific subclass?
 ''' 
 example: Fighter.objects.all().count()
 Fighter: 68
@@ -20,4 +20,3 @@ Necromancer: 11
 # Character.objects.aggregate(Avg('inventory'))
 
 # On average, how many Weapons does each character have?
-# 0 all numeric fields have a default value of 0.
