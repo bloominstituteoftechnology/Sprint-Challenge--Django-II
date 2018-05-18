@@ -9,14 +9,14 @@ Cleric: 75
 Thief: 51
 Necromancer: 11
 '''
-# ? How many total Items? ==> 174
+# How many total Items? ==> 174
 # Item.objects.all().count()
 
-# ? How many of the Items are weapons? How many are not? ==> 37 weapons : 137 non-weapon
+# How many of the Items are weapons? How many are not? ==> 37 weapons : 137 non-weapon
 # Weapon.objects.all().count()
+
 # Item.objects.all().count() - Weapon.objects.all().count()
+# On average, how many Items does each Character have? ==> 89
 
-# ? On average, how many Items does each Character have? ==> 89
 # Character.objects.aggregate(Avg('inventory'))
-
-# ? On average, how many Weapons does each character have?
+# On average, how many Weapons does each character have?
