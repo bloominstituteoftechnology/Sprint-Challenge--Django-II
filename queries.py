@@ -14,9 +14,10 @@ Necromancer: 11
 
 # How many of the Items are weapons? How many are not? ==> 37 weapons : 137 non-weapon
 # Weapon.objects.all().count()
-
 # Item.objects.all().count() - Weapon.objects.all().count()
-# On average, how many Items does each Character have? ==> 89
 
+# On average, how many Items does each Character have? ==> 89
 # Character.objects.aggregate(Avg('inventory'))
+
 # On average, how many Weapons does each character have?
+# 0 all numeric fields have a default value of 0.
