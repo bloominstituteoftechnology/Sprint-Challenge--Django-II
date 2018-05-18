@@ -7,7 +7,7 @@ Character.objects.count() # 302
 
 # How many of each specific subclass?
 Fighter.objects.count() # 68
-Mage.objects.count() # 108
+len(Mage.objects.filter(necromancer__isnull=True)) # 97
 Cleric.objects.count() # 75
 Thief.objects.count() # 51
 Necromancer.objects.count() # 11
