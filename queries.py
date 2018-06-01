@@ -46,6 +46,12 @@ for char in characters:
     item_total += len(char.inventory.all())
 print ("On average each character has", item_total / char_result, "items")
 
-""" Each character has on average 2.97 items """
+""" Each character has on average 2.97 items...unsure if the average meant the rounded average so I just did it like this """
 
 ## On average, how many Weapons does each character have?
+weapon_total = 0
+for char in characters:
+    weapon_total += len(char.inventory.filter(weapon__isnull=False))
+print ("On average each character has", weapon_total / char_result, "weapons")
+
+""" Each character has on average 0.67 weapons, perhaps because all characters do not carry a weapon """
