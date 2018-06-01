@@ -17,7 +17,13 @@ print("\n There are %d Clerics" % all_Clerics)
 print("\n There are %d Thiefs" % all_Thiefs)
 print("\n There are %d Necromancers" % all_Necromancers)
 
-#How many total Items?
-#How many of the Items are weapons? How many are not?
+all_items = Item.objects.all().count()
+print("\nHow many total Items?")
+all_items
+items_as_weapons = all_items - Weapon.objects.all().count()
+print("\nHow many of the Items are weapons? How many are not?")
+Weapon.objects.all().count()
+items_as_weapons
+
 #On average, how many Items does each Character have?
 #On average, how many Weapons does each character have?
