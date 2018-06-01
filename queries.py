@@ -1,7 +1,8 @@
 ### Write Python code that uses the Django ORM to answer:
 
 # How many total Characters are there?
-
+from charactercreator.models import Character
+len(Character.objects.all()) # 302
 
 # How many of each specific subclass?
 
