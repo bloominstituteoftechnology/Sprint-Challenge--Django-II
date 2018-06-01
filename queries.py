@@ -21,21 +21,21 @@ average_items = round(total_items/total_characters, 2)
 total_weapons = sum([character.inventory.filter(weapon__isnull=False).count() for character in all_chars])
 average_weapons = round(total_weapons/total_characters, 2)
 
-print("\nHow many total Characters are there?")
+print("\nHow many total Characters are there?") # 302
 print("\nThere are %d total characters.\n" % all_chars.count())
 
-print("\nHow many of each specific subclass?")
+print("\nHow many of each specific subclass?") #68 Fighters, 108 Mages, 75 Clerics, 51 Thiefs, 11 Necromancers
 print("\n There are %d Fighters." % all_Fighters)
 print("\n There are %d Mages." % all_Mages)
 print("\n There are %d Clerics." % all_Clerics)
 print("\n There are %d Thiefs." % all_Thiefs)
 print("\n There are %d Necromancers.\n" % all_Necromancers)
 
-print("\nHow many total Items?")
+print("\nHow many total Items?") # 174 items
 print("\nThere are %d total Items.\n" % all_items.count())
 
-print("\nHow many of the Items are weapons? How many are not?")
+print("\nHow many of the Items are weapons? How many are not?") # 37 weapons, 137 non weapons
 print("\nOut of %d Items, %d are Weapons, and %d are not.\n" % (all_items.count(), all_weapons.count(), items_not_as_weapons))
 
-print("\nOn average, how many Items and Weapons does each Character have?")
+print("\nOn average, how many Items and Weapons does each Character have?") #2.97 Items, 0.67 Weapons
 print("\nOn average, each Character has %f Items and %f Weapons.\n" % (average_items, average_weapons))
