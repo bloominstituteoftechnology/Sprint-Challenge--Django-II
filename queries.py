@@ -29,11 +29,11 @@ print(Item.objects.count() - Weapon.objects.count())
 # Returns: 137 - Items are not Weapons
 
 # - On average, how many Items does each Character have?
-totalChars = Character.objects.count())
+totalChars = Character.objects.count()
 # Returns: 302
 totalItems = sum([char.inventory.count() for char in Character.objects.all()])
 # Returns: 898
-print('On average, each Character has %f items', % (totalItems/totalChars))
+print('On average, each Character has %f items' % (totalItems/totalChars))
 # 898 / 302 ~ 2.97
 
 # - On average, how many Weapons does each character have?
