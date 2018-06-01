@@ -12,7 +12,8 @@ len(Character.objects.filter(thief=True))
 # need query count for necromancer
 
 # How many total Items?
-
+from charactercreator.models import Item
+len(Item.objects.all())
 
 # How many of the Items are weapons? How many are not?
 
