@@ -37,6 +37,7 @@ for char in characters:
 average_items = total_items / len(characters)
 
 # - On average, how many Weapons does each character have? ******
+# average of 0.6721854304635762 weapons
 total_weapons = 0
 for weapon in weapons:
 	# get the number of characters who owns this weapon
