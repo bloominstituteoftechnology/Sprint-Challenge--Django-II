@@ -10,13 +10,13 @@ from charactercreater.models import Necromancer
 print('There are', Necromancer.objects.count(), 'total Necromancers')
 
 from charactercreater.models import Fighter
-print('There are,' Fighter.objects.count(), 'total Fighters')
+print('There are', Fighter.objects.count(), 'total Fighters')
 
 from charactercreater.models import Cleric
-print('There are,' Cleric.objects.count(), 'total Clerics')
+print('There are', Cleric.objects.count(), 'total Clerics')
 
 from charactercreater.models import Thief
-print('There are,' Thief.objects.count(), 'total Thieves')
+print('There are', Thief.objects.count(), 'total Thieves')
 
 items = Item.objects.count()
 weapons = Weapon.objects.count()
