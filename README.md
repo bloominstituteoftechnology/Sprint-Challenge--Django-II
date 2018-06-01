@@ -35,8 +35,8 @@ Your main goal is to write Python code that uses the Django ORM to answer:
 * [x] - How many of each specific subclass?
 * [x] - How many total Items?
 * [x] - How many of the Items are weapons? How many are not?
-* [ ] - On average, how many Items does each Character have?
-* [ ] - On average, how many Weapons does each character have?
+* [x] - On average, how many Items does each Character have?
+* [x] - On average, how many Weapons does each character have?
 
 You can experiment/execute your code using the Django shell. Please turn in a
 file `queries.py` in this repo with your code along with comments for your
