@@ -41,6 +41,11 @@ print(item_result - weapon_result, "of the items are not weapons")
 """ 137 of the items are not weapons """
 
 ## On average, how many Items does each Character have?
+item_total = 0
+for char in characters:
+    item_total += len(char.inventory.all())
+print ("On average each character has", item_total / char_result, "items")
 
+""" Each character has on average 2.97 items """
 
 ## On average, how many Weapons does each character have?
