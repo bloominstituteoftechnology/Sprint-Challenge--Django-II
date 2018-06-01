@@ -31,8 +31,10 @@ len(not_weapons)
 # 137
 
 # On average, how many Items does each Character have?
-items = Character.objects.values('inventory').count()
-print(round(items / charCount))
-# 3, rounded
+from django.db.models import Count, Avg
+Character.objects.values('inventory').annotate(count=Count('inventory')).aggregate(avg=Avg('count'))
+# 5.160919540229885, unrounded
 
 # On average, how many Weapons does each character have?
+Weapon.objects.count() / charCount
+# 0.12251655629139073 Unrounded
