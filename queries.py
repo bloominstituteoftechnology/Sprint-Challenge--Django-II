@@ -1,3 +1,8 @@
+from charactercreator.models import Character, Fighter, Mage, Cleric, Thief, Necromancer
+from armory.models import Item, Weapon
+
+print("\nHow many total Characters are there?")
+Character.objects.all().count()
 #How many total Characters are there?
 #How many of each specific subclass?
 #How many total Items?
