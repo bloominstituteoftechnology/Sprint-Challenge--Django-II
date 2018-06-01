@@ -3,8 +3,20 @@ from armory.models import Item, Weapon
 
 print("\nHow many total Characters are there?")
 Character.objects.all().count()
-#How many total Characters are there?
-#How many of each specific subclass?
+
+all_Fighters = Fighter.objects.all().count()
+all_Mages = Mage.objects.all().count()
+all_Clerics = Cleric.objects.all().count()
+all_Thiefs = Thief.objects.all().count()
+all_Necromancers = Necromancer.objects.all().count()
+
+print("\nHow many of each specific subclass?")
+print("\n There are %d Fighters" % all_Fighters)
+print("\n There are %d Mages" % all_Mages)
+print("\n There are %d Clerics" % all_Clerics)
+print("\n There are %d Thiefs" % all_Thiefs)
+print("\n There are %d Necromancers" % all_Necromancers)
+
 #How many total Items?
 #How many of the Items are weapons? How many are not?
 #On average, how many Items does each Character have?
