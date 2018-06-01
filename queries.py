@@ -2,8 +2,8 @@ from charactercreator.models import Character
 from armory.models import Item
 ## How many total Characters are there?
 characters = Character.objects.all()
-result = len(characters)
-print("There are", result, "characters in total")
+char_result = len(characters)
+print("There are", char_result, "characters in total")
 
 """ There are 302 total characters """
 
@@ -12,10 +12,10 @@ print("There are", result, "characters in total")
 
 ## How many total Items?
 items = Item.objects.all()
-result = len(items)
-print("There are", result, "items in total")
+item_result = len(items)
+print("There are", item_result, "items in total")
 
-""" There are x total items """
+""" There are 174 total items """
 
 ## How many of the Items are weapons? How many are not?
 
