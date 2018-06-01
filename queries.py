@@ -38,10 +38,14 @@ print(Weapon.objects.all()[0])
 total = 0
 for c in characters:
     total += c.inventory.count()
-print('Average number of items:', round(total / len(characters)))
+
+print('Average number of items:', total / len(characters))
+
 
 weapons_total = 0
 for c in characters:
     weapons_total += c.inventory.filter(weapon__isnull=False).count()
+
 print('Average number of weapons:', weapons_total / len(characters))
-print(weapons_total)
+
+# manage.py shell < queries.py
