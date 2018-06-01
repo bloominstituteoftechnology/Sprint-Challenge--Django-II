@@ -25,5 +25,16 @@ print("\nHow many of the Items are weapons? How many are not?")
 Weapon.objects.all().count()
 items_as_weapons
 
-#On average, how many Items does each Character have?
-#On average, how many Weapons does each character have?
+
+Characters = Character.objects.all()
+total_Items = sum([character.inventory.count() for character in Characters])
+total_Characters = Character.objects.all().count()
+total_Items/total_Characters
+print("\nOn average, how many Items does each Character have?")
+round(total_Items/total_Characters, 2)
+
+total_Weapons = sum([character.inventory.filter(weapon__isnull=False).count() for character in Characters])
+total_Characters = Character.objects.all().count()
+average_weapons = total_Weapons/total_Characters
+print("\nOn average, how many Weapons does each character have?")
+round(total_Weapons/total_Characters, 2)
