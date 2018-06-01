@@ -18,3 +18,21 @@ print("Total Characters: {}\n".format(Thief.objects.all().count()))
 print("Total Characters: {}\n".format(Necromancer.objects.all().count()))
 # Total Characters: 11
 
+totalCharacters = characters.count()
+totalItems = 0
+totalWeapons = 0
+
+for character in characters:
+  totalItems += character.inventory.count()
+  totalWeapons += character.inventory.filter(weapon__isnull=False).count()
+
+averageItems = totalItems/totalCharacters
+ # 2.9735099337748343
+
+
+# Find average Weapons per Character
+averageWeapons = totalWeapons/totalCharacters
+
+On average, how many Weapons does each character have?
+ weps_average = totalWeapons/character_count
+ # 0.6721854304635762
