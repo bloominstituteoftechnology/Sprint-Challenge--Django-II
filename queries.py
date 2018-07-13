@@ -45,5 +45,12 @@ avg_items # returns 2.97
 # cross check character inventory IDs against the weapon model 
 all_weapons = Weapon.objects.all()
 weapons_list = []
+weapons_count = 0
 for weapon in all_weapons:
   weapons_list.append(weapon.item_id)
+
+for weapon in weapons_list:
+  val = Character.objects.filter(inventory=weapon).count()
+  weapons_count += val
+avg_weapons = weapons_count/char_count
+avg_weapons # returns 0.67
