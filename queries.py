@@ -109,7 +109,7 @@ print('avg weapons count: ', round(
     weapons_total / Character.objects.count()))
 #a: 1
 
-# Mage Average number of Weapons
+# mage weapons avg
 mages = list(Mage.objects.all())
 mage_weapon_total = 0
 for mage in mages:
@@ -119,7 +119,7 @@ print('mage avg weapons count: ', round(
     mage_weapon_total / Mage.objects.count()))
 #a: 1
 
-# Fighter Average number of Weapons
+# fighter weapons avg
 fighters = list(Fighter.objects.all())
 fighter_weapon_total = 0
 for fighter in fighters:
@@ -129,7 +129,7 @@ print('fighter avg weapons count: ', round(
     fighter_weapon_total / Fighter.objects.count()))
 #a: 1
 
-# Cleric Average number of Weapons
+# cleric weapons avg
 clerics = list(Cleric.objects.all())
 cleric_weapon_total = 0
 for cleric in clerics:
@@ -139,7 +139,7 @@ print('cleric avg weapons count: ', round(
     cleric_weapon_total / Cleric.objects.count()))
 #a: 1
 
-# Theif Average number of Weapons
+# thief weapons avg
 thieves = list(Thief.objects.all())
 thief_weapon_total = 0
 for thief in thieves:
@@ -149,7 +149,7 @@ print('thief avg weapons count: ', round(
     thief_weapon_total / Thief.objects.count()))
 #a: 1
 
-# Necromancer Average number of Weapons
+# necromancer weapons avg
 necromancers = list(Necromancer.objects.all())
 necromancer_weapon_total = 0
 for necromancer in necromancers:
