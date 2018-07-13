@@ -17,8 +17,8 @@ def count_weapons():
     return len(Weapon.objects.all())
 def count_non_weapons():
     return len(Item.objects.all()) - count_weapons()
-def average_arsenal():
+def average_inventory():
     count = 0
     for character in Character.objects.all():
-        print(character.__dict_)
+        count += character.inventory.count()
     return count
