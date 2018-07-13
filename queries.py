@@ -46,3 +46,11 @@ from armory.models import Item, Weapon
 # On average, how many Weapons does each character have?
     weps_average = totalWeapons/character_count
     # Answer: 0.6721854304635762
+
+""" From solution lecture discussion """    
+# from django.db.models import Count, Avg, Sum
+# counting = characters.annotate(count=Count('inventory')).aggregate(Sum('count'))
+# 898
+# counting = characters.annotate(count=Count('inventory')).aggregate(Avg('count'))
+
+# counting = characters.annotate(count=Count('inventory__weapon')).aggregate(Avg('count'))
