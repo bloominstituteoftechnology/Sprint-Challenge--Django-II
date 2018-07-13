@@ -65,6 +65,14 @@ Get items
     len(Item) = 174
 
 # How many of the Items are weapons? How many are not?
+Get Weapons
+    weapons = Weapons.objects.all()
+    len(weapons) = 37
+
+Get Not Weapons
+    itesm - weapons = 137
 
 # On average, how many Items does each Character have?
+
+
 # On average, how many Weapons does each character have?
