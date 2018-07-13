@@ -28,7 +28,8 @@ len(Item.objects.all()) | | Item.objects.count()
 # How many Items are Weapons? 37
 len(Weapon.objects.all()) | | Weapon.objects.count()
 
-# How many Items are NOT Weapons?
+# How many Items are NOT Weapons? 138
+# hacky, working on better solution
 Item.objects.count() - Weapon.objects.count()
 
 # On average, how many Items does each Character have?
