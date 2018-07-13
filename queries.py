@@ -38,3 +38,15 @@ for character in characters:
                        len(character.inventory.filter(weapon=None)))
 
 average_weapons = num_of_weapons / len(characters)
+
+print(f"Number of Characters:........{character_count}")
+print(f"Number of Fighters:..........{fighter_count}")
+print(f"Number of Mages:.............{mage_count}")
+print(f"Number of Clerics:...........{cleric_count}")
+print(f"Number of Theifs:............{thief_count}")
+print(f"Number of Necromancers:......{necromancer_count}")
+print(f"Number of Items:.............{item_count}")
+print(f"Number of Weapons:...........{weapon_count}")
+print(f"Number of Non-Weapon Items:..{non_weapon_count}")
+print(f"Average Items/Character:.....{average_items}")
+print(f"Averate Weapons/Character:...{average_weapons}")
