@@ -46,7 +46,7 @@ total = 0
 for char in characters:
     total += char.inventory.count()
 
-print('Average number of Items: ', round(
+print('avg items count: ', round(
     total / Character.objects.count()))
 # a: 3
 
@@ -101,3 +101,60 @@ print('necromancer avg items count: ', round(
 # a: 3
 
 # On average, how many Weapons does each character have?
+weapons_total = 0
+for char in characters:
+    weapons_total += char.inventory.filter(weapon__isnull=False).count()
+
+print('avg weapons count: ', round(
+    weapons_total / Character.objects.count()))
+#a: 1
+
+# Mage Average number of Weapons
+mages = list(Mage.objects.all())
+mage_weapon_total = 0
+for mage in mages:
+    mage_weapon_total += mage.inventory.filter(weapon__isnull=False).count()
+
+print('mage avg weapons count: ', round(
+    mage_weapon_total / Mage.objects.count()))
+#a: 1
+
+# Fighter Average number of Weapons
+fighters = list(Fighter.objects.all())
+fighter_weapon_total = 0
+for fighter in fighters:
+    fighter_weapon_total += fighter.inventory.filter(weapon__isnull=False).count()
+
+print('fighter avg weapons count: ', round(
+    fighter_weapon_total / Fighter.objects.count()))
+#a: 1
+
+# Cleric Average number of Weapons
+clerics = list(Cleric.objects.all())
+cleric_weapon_total = 0
+for cleric in clerics:
+    cleric_weapon_total += cleric.inventory.filter(weapon__isnull=False).count()
+
+print('cleric avg weapons count: ', round(
+    cleric_weapon_total / Cleric.objects.count()))
+#a: 1
+
+# Theif Average number of Weapons
+thieves = list(Thief.objects.all())
+thief_weapon_total = 0
+for thief in thieves:
+    thief_weapon_total += thief.inventory.filter(weapon__isnull=False).count()
+
+print('thief avg weapons count: ', round(
+    thief_weapon_total / Thief.objects.count()))
+#a: 1
+
+# Necromancer Average number of Weapons
+necromancers = list(Necromancer.objects.all())
+necromancer_weapon_total = 0
+for necromancer in necromancers:
+    necromancer_weapon_total += necromancer.inventory.filter(weapon__isnull=False).count()
+
+print('necromancer avg weapons count: ', round(
+    necromancer_weapon_total / Necromancer.objects.count()))
+#a: 1
