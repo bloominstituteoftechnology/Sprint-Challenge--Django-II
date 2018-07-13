@@ -29,6 +29,5 @@ print('On average, how many Items does each Character have?', average_items)
 # On average, how many Weapons does each character have?
 average_weapons = 0
 for character in characters:
-  for item in character.inventory.all():
-    if item.__class__.__name__ == 'weapon':
-      average_weapons += 1
+  average_weapons += character.inventory.filter(weapon=None)
+print('On average, how many Weapons does each character have?', average_weapons)
