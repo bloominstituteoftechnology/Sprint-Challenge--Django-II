@@ -27,3 +27,9 @@ How many of each specific subclass?
 >>> print('How many of each specific subclass?', Fighters + Mages + Clerics + Thieves + Necromancers)
 How many of each specific subclass? ```313```
 
+How many of the Items are weapons? How many are not?
+>>> Weapons = Weapon.objects.count()
+>>> Weapons
+```37```
+>>> print('How many of the Items are weapons?', Weapons, 'How many are not?', totalItems - Weapons)
+How many of the Items are weapons? ```37``` How many are not? ```137```
