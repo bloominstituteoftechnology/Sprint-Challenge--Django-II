@@ -1,7 +1,7 @@
 
 ############## The below imports were needed in the shell to run the quireis
 
-# from charactercreator.models import Character, Fighter, Mage, Cleric, Theif, Necromancer
+# from charactercreator.models import Character, Fighter, Mage, Cleric, Thief, Necromancer
 # from armory.models import Item, Weapon
 
 
@@ -26,8 +26,8 @@ clericChrs = len(Cleric.objects.all())
 print("Total of cleric characters: " + str(clericChrs)) # Ans: 75
 
 ########### Theif
-theifChrs = len(Theif.objects.all())
-print("Total of theif characters: " + str(theifChrs)) # Ans: 51
+thiefChrs = len(Theif.objects.all())
+print("Total of theif characters: " + str(thiefChrs)) # Ans: 51
 
 ########### Necromancer
 necroChrs = len(Necromancer.objects.all())
