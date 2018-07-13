@@ -39,7 +39,7 @@ print('Average number of items each Character has: ', avg_items) # A: 0.576
 
 avg_weapons = weapons.count() / characters.count()
 #model solution:
-chracters.annotate(count=models.Count('inventory__weapon')).aggregate(models.Avg('count'))
+characters.annotate(count=models.Count('inventory__weapon')).aggregate(models.Avg('count'))
 print('Average number of weapons each Character has: ', avg_weapons) # A: 0.123
 
 
