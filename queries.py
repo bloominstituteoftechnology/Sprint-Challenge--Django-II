@@ -33,9 +33,13 @@ not_weapons = items.exclude(weapon__gte=0)
 print('Total number of items that are NOT weapons: ', not_weapons.count()) # A: 137
 
 avg_items = items.count() / characters.count()
+# model solution:
+characters.annotate(count=models.Count('inventory')).aggregate(models.Avg('count'))
 print('Average number of items each Character has: ', avg_items) # A: 0.576
 
 avg_weapons = weapons.count() / characters.count()
+#model solution:
+chracters.annotate(count=models.Count('inventory__weapon')).aggregate(models.Avg('count'))
 print('Average number of weapons each Character has: ', avg_weapons) # A: 0.123
 
 
