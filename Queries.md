@@ -33,3 +33,12 @@ How many of the Items are weapons? How many are not?
 ```37```
 >>> print('How many of the Items are weapons?', Weapons, 'How many are not?', totalItems - Weapons)
 How many of the Items are weapons? ```37``` How many are not? ```137```
+
+On average, how many Items does each Character have?
+>>> print('On average, how many Items does each Character have?', Item.objects.aggregate(Avg('character')))
+On average, how many Items does each Character have? {'character__avg': ```148.6325167037862```} 
+
+On average, how many Weapons does each character have?
+>>> print('On average, how many Weapons does each Character have?', Weapon.objects.aggregate(Avg('character')))
+On average, how many Weapons does each Character have? {'character__avg': ```149.64039408866995```}
+>>>```149```
