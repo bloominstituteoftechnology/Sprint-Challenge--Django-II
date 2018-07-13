@@ -41,6 +41,15 @@ print('nonweapon items: ',
 # a: 137
 
 # On average, how many Items does each Character have?
+characters = list(Character.objects.all())
+total = 0
+for char in characters:
+    total += char.inventory.count()
+
+print('Average number of Items: ', round(
+    total / Character.objects.count()))
+# a: 3
+
 # mage items avg
 mages = list(Mage.objects.all())
 mage_total = 0
@@ -48,7 +57,8 @@ for mage in mages:
     mage_total += mage.inventory.count()
 
 print('mage avg items count: ', round(
-    mage_total / Mage.objects.count()))  # Answer: 4
+    mage_total / Mage.objects.count()))
+# a: 4
 
 # fighter items avg
 fighters = list(Fighter.objects.all())
@@ -57,7 +67,8 @@ for fighter in fighters:
     fighter_total += fighter.inventory.count()
 
 print('fighter avg items count: ', round(
-    fighter_total / Fighter.objects.count()))  # Answer: 4
+    fighter_total / Fighter.objects.count()))
+# a: 4
 
 # cleric items avg
 clerics = list(Cleric.objects.all())
@@ -66,7 +77,8 @@ for cleric in clerics:
     cleric_total += cleric.inventory.count()
 
 print('cleric avg items count: ', round(
-    cleric_total / Cleric.objects.count()))  # Answer: 3
+    cleric_total / Cleric.objects.count()))
+# a: 3
 
 # thief items avg
 thieves = list(Thief.objects.all())
@@ -75,7 +87,8 @@ for thief in thieves:
     thief_total += thief.inventory.count()
 
 print('thief avg items count: ', round(
-    thief_total / Thief.objects.count()))  # Answer: 3
+    thief_total / Thief.objects.count()))
+# a: 3
 
 # necromancer items avg
 necromancers = list(Necromancer.objects.all())
@@ -84,6 +97,7 @@ for necromancer in necromancers:
     necromancer_total += necromancer.inventory.count()
 
 print('necromancer avg items count: ', round(
-    necromancer_total / Necromancer.objects.count()))  # Answer: 3
+    necromancer_total / Necromancer.objects.count()))
+# a: 3
 
 # On average, how many Weapons does each character have?
