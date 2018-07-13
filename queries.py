@@ -49,6 +49,13 @@ weapons_count = 0
 for weapon in all_weapons:
   weapons_list.append(weapon.item_id)
 
+
+# This loop is taking each weapon id, 
+# filtering characters whose inventory includes that weapon_id, 
+# getting the count of characters with that weapon
+# then adding that count to a sum
+# Note: this would not work if duplicate weapons exists
+
 for weapon in weapons_list:
   val = Character.objects.filter(inventory=weapon).count()
   weapons_count += val
