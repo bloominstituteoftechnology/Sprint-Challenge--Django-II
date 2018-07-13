@@ -82,21 +82,24 @@ Get Not Weapons
     item - weapons = 137
 
 # On average, how many Items does each Character have?
-#SQL 
+# SQL
 SELECT COUNT(*) FROM charactercreator_character_inventory
 
 # ORM
-Get Average Item 
-  character = Character.objects.all()
-  
-  count = 0
-  for char in character:
-    count += char.inventory.count()
+Get Average Item
+    character = Character.objects.all()
 
-  avg item = count / items = 2.97 or 3
+    count = 0
+    for char in character:
+        count += char.inventory.count()
+
+    avg item = count / items = 2.97 or 3
 
 # On average, how many Weapons does each character have?
 
-# ORM 
-Get Average Weapon 
-  avg weapon = weapons / charactors = 37/174
+# ORM
+Get Average Weapon
+    count = 0
+    for char in character:
+        count += char.inventory.count() - char.inventoryfilter(weapon=None).count()
+    avg count / charactors = 37/174
