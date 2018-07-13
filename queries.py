@@ -27,7 +27,9 @@ from armory.models import Weapon
 Weapon.objects.count()
 
 # How many are not?
-
+from armory.models import Weapon
+from armory.models import Item
+len(Item.objects.all().exclude(item_id__in=Weapon.objects.all().values_list('item_ptr', flat=True)))
 
 # On average, how many Items does each Character have?
 
