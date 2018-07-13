@@ -46,19 +46,21 @@ Stretch goals:
 
 - Answer the same questions using the Django db shell/SQL (turn in `queries.sql`)
 - Do queries that filter/group on substrings (e.g. how many item names contain
-"quid")
+  "quid")
 - Add views/templates for a "dashboard" that reports the stats (pulling data
-from the database, so it updates if that data changes)
+  from the database, so it updates if that data changes)
 - Using tables or charts, ssummarize answers to the above
 - Slice the Items/Weapon distribution by Character subclass
 - Play with populating your own test data - this data was generated using
-https://github.com/volrath/django-autofixture (this fork is compatible with
-Django 2.0 and is installed by the `requirements.txt` in the `testdata` branch,
-but you may still need dependencies such as `gdal-bin` (search for how to
-install this for your specific platform))
+  https://github.com/volrath/django-autofixture (this fork is compatible with
+  Django 2.0 and is installed by the `requirements.txt` in the `testdata` branch,
+  but you may still need dependencies such as `gdal-bin` (search for how to
+  install this for your specific platform))
 
 In general, this exercise is meant to test your ability to navigate and
 investigate data in a Django application. If you get to the stretch goal of
 using autofixture, the practical application here is testing - you can have
 tests that generate unique random data each time, ensuring the robustness of
 your application.
+
+Initial pull
