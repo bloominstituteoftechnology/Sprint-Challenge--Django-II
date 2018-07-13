@@ -34,3 +34,5 @@ Character.objects.all().annotate(items=models.Count('inventory')).aggregate(mode
 #6 Average weapons per character: 1.1666
 Character.objects.values('inventory').annotate(items=models.Count('inventory', filter=models.Q(inventory__in=Weapon.objects.all()))).aggregate(models.Avg('items'))
 
+
+#I got different answers for average weapon per character on SQL vs ORM, so I'm not entirely sure which is correct. 
