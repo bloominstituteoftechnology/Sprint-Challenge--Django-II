@@ -57,13 +57,16 @@ print("Total that are not weapons: ", total_non_weapons)
 totalItems = 0
 for character in Character.objects.all():
   totalItems += character.inventory.count()
+
 avg_items = totalItems / Character.objects.count()
 print("Average number of items per character", avg_items)
+
 
 # On average, how many Weapons does each character have?
 ### 6.7218
 nonWeapons = 0
 for character in Character.objects.all():
   nonWeapons += character.inventory.exclude(item_id__in=Weapon.objects.all()).count()
+
 avg_Weapons = (totalItems - nonWeapons) / Character.objects.all().count()
 print("Average number of weapons: ", avg_Weapons)
