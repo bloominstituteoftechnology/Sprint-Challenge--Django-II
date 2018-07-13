@@ -21,4 +21,6 @@ def average_inventory():
     count = 0
     for character in Character.objects.all():
         count += character.inventory.count()
-    return count
+    return count//Character.objets.count()
+def average_weapons:
+    pass
