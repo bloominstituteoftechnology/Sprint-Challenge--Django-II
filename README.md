@@ -44,10 +44,13 @@ Necromancer= 11
 - How many of the Items are weapons? How many are not?
 Weapon = 37
 Not Weapon= 137
+Item.objects.filter(Weapon=none).count()
 - On average, how many Items does each Character have?
-
+Character.objects.all().annotate(count=models.Count('inventory')).aggregate(models.Avg('count'))
+{'count__avg': 2.9735099337748343}
 - On average, how many Weapons does each character have?
-
+Character.objects.all().annotate(count=models.Count('inventory__weapon')).aggregate(models.Avg('count'))
+{'count__avg': 0.6721854304635762}
 You can experiment/execute your code using the Django shell. Please turn in a
 file `queries.py` in this repo with your code along with comments for your
 answers.
