@@ -32,10 +32,20 @@ span relationships (the equivalent of `JOIN` in SQL).
 Your main goal is to write Python code that uses the Django ORM to answer:
 
 - How many total Characters are there?
+302
 - How many of each specific subclass?
+Fighter = 68
+Mage = 108
+Cleric = 75
+Thief = 51
+Necromancer= 11
 - How many total Items?
+174
 - How many of the Items are weapons? How many are not?
+Weapon = 37
+Not Weapon= 137
 - On average, how many Items does each Character have?
+
 - On average, how many Weapons does each character have?
 
 You can experiment/execute your code using the Django shell. Please turn in a
