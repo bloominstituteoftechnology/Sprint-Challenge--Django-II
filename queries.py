@@ -22,10 +22,10 @@ items_arenot_weapons = Item.objects.exclude(
     item_id__in=Weapon.objects.all()).count()
 
 # - On average, how many Items does each Character have?
-average_item_per_character = Characters.objects.count() / Item.objects.count()
+average_item_per_character = Item.objects.count() / Characters.objects.count()
 
 # - On average, how many Weapons does each character have?
-average_weapon_per_character = Characters.objects.count() / items_are_weapons()
+average_weapon_per_character = items_are_weapons() / Characters.objects.count()
 
 print("Number of total characters: " + total_characters)
 
