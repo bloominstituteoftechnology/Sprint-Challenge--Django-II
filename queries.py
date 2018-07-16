@@ -33,13 +33,18 @@ print('Weapon Items: ', weaponItems)
 
 # Non-weapon Items: 137
 print('Non-weapon Items: ', totalItems - weaponItems)
+# print('Non-weapon Items: ', Item.objects.exclude(item_id__in=Weapon.object.all()).count())
 
 # On average, how many Items does each Character have?
 # Average Item per Character: ~3
 totalItemCount = 0
-for char in Character.objects.count():
-    totalItemCount += char.inventory.count()
-
+for toon in Character.objects.all():
+    totalItemCount += toon.inventory.count()
 print('Average Item per Character: ', totalItemCount / Character.objects.count())
 
 # On average, how many Weapons does each character have?
+# Average Weapon per Character: ~1
+totalWeaponCount = 0
+for toon in Character.objects.all():
+    totalWeaponCount += toon.inventory.exclude(item_id__in=Weapon.object.all()).count()
+print('Average Weapon per Character: ', (totalItemCount - totalWeaponCount) / Character.objects.count())
