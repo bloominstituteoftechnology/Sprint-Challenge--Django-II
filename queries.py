@@ -1,5 +1,5 @@
-from charactercreator.models import *
-from armory.models import *
+from charactercreator.models import Character, Fighter, Mage, Cleric, Thief, Necromancer
+from armory.models import Item, Weapon
 
 # How many total Characters are there?
 # 302
@@ -16,12 +16,24 @@ print('Fighters: ', Fighter.objects.count())
 print('Clerics: ', Cleric.objects.count())
 
 # Thieves: 51
-print('Thieves: ', Thieve.objects.count())
+print('Thieves: ', Thief.objects.count())
 
 # Necromancers: 11
 print('Necromancers: ', Necromancer.objects.count())
 
 # How many total Items?
+# Total Items: 174
+totalItems = Item.objects.count()
+print('Total Items: ', totalItems)
+
 # How many of the Items are weapons? How many are not?
+# Weapon Items: 37
+weaponItems = Weapon.objects.count()
+print('Weapon Items: ', weaponItems)
+
+# Non-weapon Items: 137
+print('Non-weapon Items: ', totalItems - weaponItems)
+
 # On average, how many Items does each Character have?
+
 # On average, how many Weapons does each character have?
