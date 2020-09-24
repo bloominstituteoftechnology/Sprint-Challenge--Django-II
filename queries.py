@@ -2,7 +2,7 @@ from django.db.models import Count, Avg
 from charactercreator.models import *
 from armory.models import Item, Weapon
 
-numberOfCharacters = Character.objects.all().count()
+numberOfCharacters = Character.objects.count()
 fighters = Fighter.objects.count()
 necros = Necromancer.objects.count()
 thieves = Thief.objects.count()
