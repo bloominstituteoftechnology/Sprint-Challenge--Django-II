@@ -25,6 +25,8 @@ print("Total # characters", numberOfCharacters)
 # 302
 print("Total # fighters", fighters)
 # 68
+print("Total # mages - necros", mages)
+# 97 necros are subtracted because they use Mage as a base class
 print("Total # necros", necros)
 # 11
 print("Total # thieves", thieves)
